@@ -15,15 +15,16 @@ public class App
 
         System.out.print("What is the order amount? ");
         int amount = input.nextInt();
+        input.nextLine();
 
         System.out.print("What state do you live in? ");
-        String state = input.next().toLowerCase();
+        String state = input.nextLine().toLowerCase();
 
         String county = "none";
 
         if("wisconsin".equalsIgnoreCase(state)){
             System.out.print("What county do you live in? ");
-            county = input.next().toLowerCase();
+            county = input.nextLine().toLowerCase();
         }
 
         StateTax salesTax = new StateTax(state, county, amount);

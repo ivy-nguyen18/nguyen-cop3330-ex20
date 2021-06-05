@@ -1,3 +1,7 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 1 Solution
+ *  Copyright 2021 Ivy Nguyen
+ */
 package ex20.base;
 
 public class StateTax {
@@ -35,7 +39,8 @@ public class StateTax {
 
         if("wisconsin".equalsIgnoreCase(state)){
             if("eau claire".equalsIgnoreCase(county) || "dunn".equalsIgnoreCase(county) ) {
-                tax *= countyTax;
+                tax = (tax / stateTax) * (stateTax + countyTax);
+                System.out.println(tax);
             }
         }
 
